@@ -1,0 +1,53 @@
+/*
+    This CSS file simply alters some of the default setting, e.g. text box sizes
+    from those in the default bootstrap css (http://getbootstrap.com) which is 
+    hosted here: http://www.bootstrapcdn.com/
+*/
+/* 
+    Created on : 27-Nov-2013, 14:27:37
+    Author     : Emily
+*/ 
+
+body {
+   padding-top: 40px;
+   padding-bottom: 40px;
+   background-color: #E6F5FF;
+   
+}
+
+.form-horizontal {
+    max-width: 750px;
+    background-color: #FFFFFF;
+    position: relative;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.form-group {
+    position: relative;
+    margin: 0 auto;
+    padding-left: 50px;
+    padding-right: 50px;  
+    padding: 10px;
+}
+
+.form-group .form-control {
+    position: relative;
+    max-width: 200px;
+    
+}
+
+.jumbotron {
+    max-width: 750px;
+    margin: 0 auto;
+    background-color: #6591D6;
+}
+.jumbotron h1 {
+    margin: 0 auto;
+    padding: 10px; 
+}
+
+.btn {
+    background-color: #6591D6;
+}
+
