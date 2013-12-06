@@ -13,19 +13,26 @@
         // Convert returned JSON object to something useable by PHP
         $underwriter_return = json_decode(curl_exec($connection), true);
         curl_close($connection);
-        var_dump($underwriter_return);
-        $error_list = '';
-        if(isset($underwriter_return)) {
-            $post_success = check_successful_post($underwriter_return);
-
-            if (!$post_success) {
-                $error_list = handle_errors($underwriter_return);
-            } 
-        }
-        
-        return $error_list;
+        echo "return: ";
+        var_dump($underwriter_return); 
+       
+        return $underwriter_return;
     }
     
+    function process_post_return($return){
+        $post_return = '';
+        if(isset($return)) {
+            $post_success = check_successful_post($return);
+
+            if (!$post_success) {
+                $post_return = handle_errors($return);
+            } else {
+                $post_return = get_uuid($return);
+            }            
+        }
+        return $post_return;
+        
+    }
     function check_successful_post($return) {
         $success = false;
         foreach($return as $key => $value) {
@@ -39,13 +46,25 @@
     }
     
     function handle_errors($errors) {
-        $error_list = '<div class="alert alert-danger"> <ul>';
+        $error_list_html = '<div class="alert alert-danger"> <ul>';
         foreach($errors as $key => $error_messages) {
             foreach($error_messages as $error) {
-                $error_list .= "<li>".  str_replace('_', ' ',ucfirst($key)).' '.$error."</li>";
+                $error_list_html .= "<li>".  str_replace('_', ' ',ucfirst($key)).' '.$error."</li>";
             }
         }
-        $error_list .= '</ul></div>';
-        return $error_list;
+        $error_list_html .= '</ul></div>';
+        return $error_list_html;
+    }
+    
+    function get_uuid($return){
+        $uuid = '';
+        foreach($return as $key => $value) {
+            if(is_string($value)) {
+                if(strstr($key, "uuid")) {
+                    $_SESSION['uuid'] = $value;
+                }
+            }
+        }
+        return $_SESSION['uuid'];
     }
 ?>

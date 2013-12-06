@@ -25,34 +25,27 @@
     <div class="container">
         
         <form class="form-horizontal" role= "form" method="post">
-            <h2 class="form-heading">Please Sign-in</h2>
-            <p>If you have registered before, please login</p>
+            <h2 class="form-heading">Register</h2>
+            <p>Please enter a username and password</p>
             
             <div class="form-group">
                 <?php if(isset($list_of_errors)) {echo $list_of_errors;} ?>
             </div>
       
             <div class="form-group">
-                <label for="username" class="col-sm-2 control-label">Username:</label> 
-                <input type="text" class="form-control" required autofocus name="username">
+                <label for="register_username" class="col-sm-2 control-label">Username:</label> 
+                <input type="text" class="form-control" required autofocus name="register_username">
             </div>
             <div class="form-group">
-                <label for="password" class="col-sm-2 control-label">Password:</label> 
-                <input type="password" class="form-control"  required name="password">
+                <label for="register_password" class="col-sm-2 control-label">Password:</label> 
+                <input type="password" class="form-control"  required name="register_password">
             </div>
             
             <div class="form-group" class="col-sm-2 control-label">
-                <button class="btn btn-default pull-right" type="submit" name="signin">Sign in</button>
+                <button class="btn btn-default pull-right" type="submit" name="submit_registration">Next</button>
             </div>
         </form>
 
-        <form class="form-horizontal" role= "form" method="post">
-            <h2 class="form-heading">Register</h2>
-            <p>If you are new, register your details for a quote.</a>
-            <div class="form-group" class="col-sm-2 control-label">
-                <button class="btn btn-default pull-right" type="submit" name="register">Register</button>
-            </div>
-        </form>
     </div>
   </body>
 </html>

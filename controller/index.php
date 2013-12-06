@@ -1,7 +1,7 @@
 <?php
     session_start();
     
-    include "../view/index.html";
+    
     
     if(isset($_POST['signin'])) {
         $url_end = "users";
@@ -11,12 +11,15 @@
             "uuid" => ''
         );   
         include '../model/communicate_with_underwriter.php';
-        $list_of_errors = post_to_underwriter($post_info, $url_end);
-        if ($list_of_errors === ""){
+        $return_from_underwriter = post_to_underwriter($post_info, $url_end);
+        $processed_return = process_post_return($return_from_underwriter);
+        if (isset($_SESSION['uuid'])){
             //header('Location: address.php');
             echo "YES";
         }   
     }
-    
-   
+    if(isset($_POST['register'])) {
+        header("Location: /CarInsuranceBroker/model/register.php");
+    }
+    include "../view/index.html";
 ?>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <?php
+    session_start();
     if(isset($_POST['driver_history'])) {
         $url_end = "driver_history";
         $post_info = array(

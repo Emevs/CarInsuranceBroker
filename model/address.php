@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <?php
+    session_start();
     if(isset($_POST['address'])) {
         $url_end = "addresses";
         $post_info = array(
