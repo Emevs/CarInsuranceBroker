@@ -1,22 +1,3 @@
-<!DOCTYPE html>
-<?php
-    if(isset($_POST['address'])) {
-        $url_end = "addresses";
-        $post_info = array(
-            "house_name_or_number" => $_POST['name_or_number'],
-            "street_name" => $_POST['street_name'],
-            "county" => $_POST['county'],
-            "city" => $_POST['city'],
-            "postcode" => $_POST['postcode']
-        );   
-        include 'communicate_with_underwriter.php';
-        $list_of_errors = post_to_underwriter($post_info, $url_end);
-        if ($list_of_errors == ''){
-            header('Location: driver_history.php');
-        }
-        
-    }
-?>
 <html>
     <head>
         <title>Address</title>
@@ -24,7 +5,7 @@
              hosted online at http://www.bootstrapcdn.com/-->
         <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet">
          <!-- Custom styles for form -->
-        <link href="forms.css" rel="stylesheet">
+        <link href="/CarInsuranceBroker/view/forms.css" rel="stylesheet">
         
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
