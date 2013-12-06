@@ -14,16 +14,13 @@
         $underwriter_return = json_decode(curl_exec($connection), true);
         curl_close($connection);
         var_dump($underwriter_return);
+        $error_list = '';
         if(isset($underwriter_return)) {
             $post_success = check_successful_post($underwriter_return);
 
             if (!$post_success) {
                 $error_list = handle_errors($underwriter_return);
-            } else {
-                $error_list = '';
-            }
-        } else {
-            
+            } 
         }
         
         return $error_list;
