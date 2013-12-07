@@ -19,7 +19,7 @@
         }   
     }
     if(isset($_POST['register'])) {
-        header("Location: /CarInsuranceBroker/model/register.php");
+        header("Location: register.php");
     }
-    include "../view/index.html";
+    include "view/index.html";
 ?>

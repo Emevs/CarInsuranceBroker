@@ -15,20 +15,18 @@
             <h1>Car Insurance Broker</h1>
         </div>
         <div class = "container">
-            
-           <h2 class="form-group-heading">Quote Details</h2>
-           <p>Thank you. Your quote has new been generated, look over the details carefully and click the button below to save.</p>
-           <div class="form-group">
-               <?php echo $quote_details;
-                ?>       
-           </div>
-           <form class="form-horizontal" role= "form" method="post">
-                <div class="form-group">
-                    <div  class="col-md-12 control-label">
-                        <button type="submit" class="btn btn-default pull-right" name="save_quote">Save Quote</button>
-                    </div>
+            <h2 class="form-group-heading">Quote Details</h2>
+            <p class="text-success"><strong>Your quote has been saved.</strong></p>
+            <p> To look at your quote again in future, please make a note of your quote reference number: <p>
+                <strong><?php echo $_SESSION['quote_reference']?> </strong>
+        <form class="form-horizontal" role= "form" method="post">
+            <div class="form-group">
+                <div  class="col-md-12 control-label">
+                    <button type="submit" class="btn btn-default pull-right" name="logout">Logout</button>
                 </div>
-            </form>
+            </div>  
+        </form>
+           
         </div>
         
     </body>

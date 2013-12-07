@@ -14,21 +14,22 @@ body {
    background-color: #E6F5FF;
    
 }
-
 .form-horizontal {
     max-width: 750px;
-    background-color: #FFFFFF;
     position: relative;
     margin: 0 auto;
     padding: 10px;
 }
 
-.form-group {
+.container {
     position: relative;
     margin: 0 auto;
     padding-left: 50px;
     padding-right: 50px;  
-    padding: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #FFFFFF;
+    max-width: 750px;
 }
 
 .form-group .form-control {
@@ -50,4 +51,3 @@ body {
 .btn {
     background-color: #6591D6;
 }
-

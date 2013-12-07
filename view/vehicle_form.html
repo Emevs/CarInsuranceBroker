@@ -5,7 +5,7 @@
              hosted online at http://www.bootstrapcdn.com/-->
         <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet">
          <!-- Custom styles for form -->
-        <link href="/CarInsuranceBroker/view/forms.css" rel="stylesheet">
+        <link href="/CarInsuranceBroker/view/broker.css" rel="stylesheet">
         
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,7 +20,7 @@
             <p>Please fill in your vehicle details carefully.</p>
             
             <div class="form-group">
-                <?php if(isset($list_of_errors)) {echo $list_of_errors;} ?>
+                <?php if(isset($processed_return)) {echo $processed_return;} ?>
             </div>
             <div class="form-group">
                 <label for="vehicle_registration" class="col-md-6 control-label">Vehicle registration number:</label>
@@ -28,10 +28,10 @@
             </div>
             <div class="form-group">
                 <label for="annual_mileage" class="col-md-6 control-label">Annual Mileage:</label> 
-                <input type="number" class="form-control" name="annual_mileage"  id="annual_mileage">
+                <input type="number" min="1000" class="form-control" name="annual_mileage"  id="annual_mileage">
             </div>
             <div class="form-group">
-                <label for="estimated_value" class="col-md-6 control-label">Estimated Vehicle Value:</label> 
+                <label for="estimated_value" class="col-md-6 control-label">Estimated Vehicle Value: £</label> 
                 <input type="number" class="form-control" name="estimated_value"  id="estimated_value">
              </div>
             <div class="form-group">
@@ -40,7 +40,7 @@
             </div>
             <div class="form-group">
                 <label for="policy_start_date" class="col-md-6 control-label">Policy start date:</label> 
-                <input type="text" class="form-control" name="policy_start_date" id="policy_start_date">
+                <input type="date" class="form-control" name="policy_start_date" id="policy_start_date">
             </div>
             <div class="form-group">
                 <div  class="col-md-12 control-label">

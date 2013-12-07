@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <?php
-    
     session_start();
-    var_dump($_SESSION['uuid']);
     if(isset($_POST['person'])) {
         $url_end = "personal_details";
         $post_info = array(
@@ -20,11 +18,13 @@
         include '../model/communicate_with_underwriter.php';
         $return_from_underwriter = post_to_underwriter($post_info, $url_end);
         $processed_return = process_post_return($return_from_underwriter);
+        echo "<br>processes return: ";
+        var_dump($processed_return);
         if ($processed_return === ""){
             var_dump($list_of_errors);
             header('Location: address.php');
             
         }   
     }
-    include '../view/person_form.html';
+    include 'view/person_form.html';
 ?>

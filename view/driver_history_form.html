@@ -5,7 +5,7 @@
              hosted online at http://www.bootstrapcdn.com/-->
         <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet">
          <!-- Custom styles for form -->
-        <link href="/CarInsuranceBroker/view/forms.css" rel="stylesheet">
+        <link href="/CarInsuranceBroker/view/broker.css" rel="stylesheet">
         
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,16 +15,16 @@
             <h1>Car Insurance Broker</h1>
         </div>
         
-        <form class="form-horizontal" role= "form" action="person.php" method="post">
+        <form class="form-horizontal" role= "form" method="post">
             <h2 class="form-group-heading">Driver History</h2>
             <p>Please fill in your driver history carefully.</p>
             
             <div class="form-group">
-                <?php if(isset($list_of_errors)) {echo $list_of_errors;} ?>
+                <?php if(isset($processed_return)) {echo $processed_return;} ?>
             </div>
             <div class="form-group">   
                 <label for="num_of_incidents" class="col-md-6 control-label">Number of incidents:</label>
-                <input type="number" class="form-control" name="num_of_incidents" id="num_of_incidents">
+                <input type="number" min="0" class="form-control" name="num_of_incidents" id="num_of_incidents">
             </div>
             <div class="form-group">
                 <div  class="col-md-12 control-label">

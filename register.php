@@ -1,7 +1,6 @@
 <?php    
     
     session_start();
-    var_dump($_POST);
     if(isset($_POST['submit_registration'])) {
         $url_end = "users";
         $post_info = array(
@@ -19,5 +18,5 @@
         }   
     }
     
-   include "../view/register.html";
+   include "view/register.html";
 ?>
