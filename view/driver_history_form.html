@@ -14,23 +14,24 @@
         <div class="jumbotron">
             <h1>Car Insurance Broker</h1>
         </div>
-        
-        <form class="form-horizontal" role= "form" method="post">
-            <h2 class="form-group-heading">Driver History</h2>
-            <p>Please fill in your driver history carefully.</p>
-            
-            <div class="form-group">
-                <?php if(isset($processed_return)) {echo $processed_return;} ?>
-            </div>
-            <div class="form-group">   
-                <label for="num_of_incidents" class="col-md-6 control-label">Number of incidents:</label>
-                <input type="number" min="0" class="form-control" name="num_of_incidents" id="num_of_incidents">
-            </div>
-            <div class="form-group">
-                <div  class="col-md-12 control-label">
-                    <button type="submit" class="btn btn-default" name="driver_history">Next</button>
+        <div class="container">
+            <form class="form-horizontal" role= "form" method="post">
+                <h2 class="form-group-heading">Driver History</h2>
+                <p>Please fill in your driver history carefully.</p>
+
+                <div class="form-group">
+                    <?php if(isset($processed_return)) {echo $processed_return;} ?>
                 </div>
-            </div>
-        </form>
+                <div class="form-group">   
+                    <label for="num_of_incidents" class="col-md-6 control-label">Number of incidents:</label>
+                    <input type="number" min="0" class="form-control" name="num_of_incidents" id="num_of_incidents">
+                </div>
+                <div class="form-group">
+                    <div  class="col-md-12 control-label">
+                        <button type="submit" class="btn btn-default" name="driver_history">Next</button>
+                    </div>
+                </div>
+            </form>
+        </div>
     </body>
 </html>

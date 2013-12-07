@@ -8,7 +8,7 @@
             "password" => $_POST['register_password'],
             "uuid" => ''
         );   
-        include '../model/communicate_with_underwriter.php';
+        include 'communicate_with_underwriter.php';
         $return_from_underwriter = post_to_underwriter($post_info, $url_end);
         $processed_return = process_post_return($return_from_underwriter);
         var_dump($processed_return);

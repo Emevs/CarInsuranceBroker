@@ -68,23 +68,14 @@
         return $_SESSION['uuid'];
     }
     
-    function get_from_underwriter($get_params, $url_end) {
+    function get_from_underwriter($url_end) {
         $connection = curl_init();
-        $url = "localhost:3000/".$url_end;
-        // Just use default header information of other options.
-        $header = array('HTTP_ACCEPT' => "application/json");
+        $url = "localhost:3000/".$url_end;       
         curl_setopt($connection, CURLOPT_URL, $url);
-        curl_setopt($connection, CURLOPT_HTTPHEADER, $header);
-        curl_setopt($connection, CURLOPT_HTTPGET, 1);
-        curl_setopt($connection, CURLOPT_POSTFIELDS, $get_params);
-        curl_setopt($connection, CURLOPT_RETURNTRANSFER, true);
-
-        // Convert returned JSON object to something useable by PHP
+        curl_setopt($connection, CURLOPT_RETURNTRANSFER, 1);
+        
         $underwriter_return = json_decode(curl_exec($connection), true);
         curl_close($connection);
-        echo "return: ";
-        var_dump($underwriter_return); 
-       
         return $underwriter_return;
     }
     

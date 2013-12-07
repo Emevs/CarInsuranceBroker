@@ -14,79 +14,80 @@
         <div class="jumbotron">
             <h1>Car Insurance Broker</h1>
         </div>
-        
-        <form class="form-horizontal" role= "form" method="post">
-            <h2>Personal Details</h2>
-            <p>Please fill in your personal details carefully.</p>
-            
-            <div class="form-group">
-                <?php if(isset($processed_return)) {echo $processed_return;} ?>
-            </div>
-            <!-- It would have been better to have these values returned from the Ruby-on-Rails -->
-            <div class="form-group">
-                <label for="title" class="col-md-6 control-label">Title </label>
-                <select name="title" class="form-control">
-                        <option value="Mr">Mr</option>
-                        <option value="Mrs">Mrs</option>
-                        <option value="miss">Miss</option>
-                        <option value="Dr">Dr</option>
-                        <option value="Other">Other</option>
-                  </select>
-            </div>
-            <div class="form-group">
-                <label for="forenames" class="col-md-6 control-label">Forenames:</label>
-                <input type="text" class="form-control" name="forenames" id="forenames">
-            </div>
-            <div class="form-group">
-                <label for="surname" class="col-md-6 control-label">Surname:</label> 
-                <input type="text" class="form-control" name="surname"  id="surname">
-            </div>
-            <div class="form-group">
-                <label for="dob" class="col-md-6 control-label">Date of birth:</label> 
-                <input type="date" class="form-control" name="dob"  id="dob">
-            </div>
-            <div class="form-group">
-                <label for="email" class="col-md-6 control-label"> E-mail Address:</label> 
-                <input type="email" class="form-control" name="email"  id="email">
-            </div>
-            <div class="form-group">
-                <label for="telephone" class="col-md-6 control-label">Telephone number:</label> 
-                <input type="text" class="form-control" name="telephone" id="telephone">
-            </div>
-            <div class="form-group">
-                <label for="license_type" class="col-md-6 control-label">License Type:</label> 
-                <select name="license_type" class="form-control">
-                    <option value="full">Full</option>
-                    <option value="provisional">Provisional</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="license_period" class="col-md-6 control-label">License Period:</label> 
-                <input type="text" class="form-control" name="license_period" id="license_period">
-            </div>
-            
-            <!-- As mentioned previously, it would have been better to have these values returned from the Ruby-on-Rails -->
-            <div class="form-group">
-                <label for="occupation" class="col-md-6 control-label">Occupation:</label> 
-                <select name="occupation" class="form-control">
-                        <option value="Doctor">Doctor</option>
-                        <option value="Nurse">Nurse</option>
-                        <option value="Vet">Vet</option>
-                        <option value="Builder">Builder</option>
-                        <option value="Plumber">Plumber</option>
-                        <option value="Student">Student</option>
-                        <option value="Teacher">Teacher</option>
-                        <option value="Lecturer">Lecturer</option>
-                        <option value="Other">Other</option>
-                        <option value="None">None</option>
-                  </select>
-                
-            </div>
-            <div class="form-group">
-                <div  class="col-md-12 control-label">
-                    <button type="submit" class="btn btn-default pull-right" name="person">Next</button>
+        <div class="container">
+            <form class="form-horizontal" role= "form" method="post">
+                <h2>Personal Details</h2>
+                <p>Please fill in your personal details carefully.</p>
+
+                <div class="form-group">
+                    <?php if(isset($processed_return)) {echo $processed_return;} ?>
                 </div>
-            </div>
-        </form>
+                <!-- It would have been better to have these values returned from the Ruby-on-Rails -->
+                <div class="form-group">
+                    <label for="title" class="col-md-6 control-label">Title </label>
+                    <select name="title" class="form-control">
+                            <option value="Mr">Mr</option>
+                            <option value="Mrs">Mrs</option>
+                            <option value="Miss">Miss</option>
+                            <option value="Dr">Dr</option>
+                            <option value="Other">Other</option>
+                      </select>
+                </div>
+                <div class="form-group">
+                    <label for="forenames" class="col-md-6 control-label">Forenames:</label>
+                    <input type="text" class="form-control" name="forenames" id="forenames">
+                </div>
+                <div class="form-group">
+                    <label for="surname" class="col-md-6 control-label">Surname:</label> 
+                    <input type="text" class="form-control" name="surname"  id="surname">
+                </div>
+                <div class="form-group">
+                    <label for="dob" class="col-md-6 control-label">Date of birth:</label> 
+                    <input type="date" class="form-control" name="dob"  id="dob">
+                </div>
+                <div class="form-group">
+                    <label for="email" class="col-md-6 control-label"> E-mail Address:</label> 
+                    <input type="email" class="form-control" name="email"  id="email">
+                </div>
+                <div class="form-group">
+                    <label for="telephone" class="col-md-6 control-label">Telephone number:</label> 
+                    <input type="text" class="form-control" name="telephone" id="telephone">
+                </div>
+                <div class="form-group">
+                    <label for="license_type" class="col-md-6 control-label">License Type:</label> 
+                    <select name="license_type" class="form-control">
+                        <option value="full">Full</option>
+                        <option value="provisional">Provisional</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="license_period" class="col-md-6 control-label">License Period:</label> 
+                    <input type="text" class="form-control" name="license_period" id="license_period">
+                </div>
+
+                <!-- As mentioned previously, it would have been better to have these values returned from the Ruby-on-Rails -->
+                <div class="form-group">
+                    <label for="occupation" class="col-md-6 control-label">Occupation:</label> 
+                    <select name="occupation" class="form-control">
+                            <option value="Doctor">Doctor</option>
+                            <option value="Nurse">Nurse</option>
+                            <option value="Vet">Vet</option>
+                            <option value="Builder">Builder</option>
+                            <option value="Plumber">Plumber</option>
+                            <option value="Student">Student</option>
+                            <option value="Teacher">Teacher</option>
+                            <option value="Lecturer">Lecturer</option>
+                            <option value="Other">Other</option>
+                            <option value="None">None</option>
+                      </select>
+
+                </div>
+                <div class="form-group">
+                    <div  class="col-md-12 control-label">
+                        <button type="submit" class="btn btn-default pull-right" name="person">Next</button>
+                    </div>
+                </div>
+            </form>
+        </div>
     </body>
 </html>

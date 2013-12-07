@@ -14,39 +14,40 @@
         <div class="jumbotron">
             <h1>Car Insurance Broker</h1>
         </div>
-        
-        <form class="form-horizontal" role= "form" method="post">
-            <h2 class="form-group-heading">Vehicle Details</h2>
-            <p>Please fill in your vehicle details carefully.</p>
-            
-            <div class="form-group">
-                <?php if(isset($processed_return)) {echo $processed_return;} ?>
-            </div>
-            <div class="form-group">
-                <label for="vehicle_registration" class="col-md-6 control-label">Vehicle registration number:</label>
-                <input type="text" class="form-control" name="vehicle_registration" id="vehicle_registration">
-            </div>
-            <div class="form-group">
-                <label for="annual_mileage" class="col-md-6 control-label">Annual Mileage:</label> 
-                <input type="number" min="1000" class="form-control" name="annual_mileage"  id="annual_mileage">
-            </div>
-            <div class="form-group">
-                <label for="estimated_value" class="col-md-6 control-label">Estimated Vehicle Value: £</label> 
-                <input type="number" class="form-control" name="estimated_value"  id="estimated_value">
-             </div>
-            <div class="form-group">
-                <label for="parking_location" class="col-md-6 control-label">Parking Location:</label> 
-                <input type="text" class="form-control" name="parking_location"  id="parking_location">
-            </div>
-            <div class="form-group">
-                <label for="policy_start_date" class="col-md-6 control-label">Policy start date:</label> 
-                <input type="date" class="form-control" name="policy_start_date" id="policy_start_date">
-            </div>
-            <div class="form-group">
-                <div  class="col-md-12 control-label">
-                    <button type="submit" class="btn btn-default pull-right" name="vehicle">Next</button>
+        <div class="container">
+            <form class="form-horizontal" role= "form" method="post">
+                <h2 class="form-group-heading">Vehicle Details</h2>
+                <p>Please fill in your vehicle details carefully.</p>
+
+                <div class="form-group">
+                    <?php if(isset($processed_return)) {echo $processed_return;} ?>
                 </div>
-            </div>
-        </form>
+                <div class="form-group">
+                    <label for="vehicle_registration" class="col-md-6 control-label">Vehicle registration number:</label>
+                    <input type="text" class="form-control" name="vehicle_registration" id="vehicle_registration">
+                </div>
+                <div class="form-group">
+                    <label for="annual_mileage" class="col-md-6 control-label">Annual Mileage:</label> 
+                    <input type="number" min="1000" class="form-control" name="annual_mileage"  id="annual_mileage">
+                </div>
+                <div class="form-group">
+                    <label for="estimated_value" class="col-md-6 control-label">Estimated Vehicle Value: £</label> 
+                    <input type="number" class="form-control" name="estimated_value"  id="estimated_value">
+                 </div>
+                <div class="form-group">
+                    <label for="parking_location" class="col-md-6 control-label">Parking Location:</label> 
+                    <input type="text" class="form-control" name="parking_location"  id="parking_location">
+                </div>
+                <div class="form-group">
+                    <label for="policy_start_date" class="col-md-6 control-label">Policy start date:</label> 
+                    <input type="date" class="form-control" name="policy_start_date" id="policy_start_date">
+                </div>
+                <div class="form-group">
+                    <div  class="col-md-12 control-label">
+                        <button type="submit" class="btn btn-default pull-right" name="vehicle">Next</button>
+                    </div>
+                </div>
+            </form>
+        </div>
     </body>
 </html>

@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
+
+    <title>Car Insurance</title>
+
+    <!-- Bootstrap core CSS http://http://getbootstrap.com/ 
+        hosted online at http://www.bootstrapcdn.com/-->
+   <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for form -->
+   <link href="/CarInsuranceBroker/view/broker.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="jumbotron">
+        <h1>Car Insurance Broker</h1>
+    </div>
+    <div class="container">
+        
+        <form class="form-horizontal" role= "form" method="post">
+            <h2 class="form-heading">Retrieve Quote</h2>
+            <p>Please enter your quote reference and email address to retrieve your quote.</p>
+                  
+            <div class="form-group">
+                <label for="username" class="col-sm-2 control-label">Email: </label> 
+                <input type="text" class="form-control" required autofocus name="email">
+            </div>
+            <div class="form-group">
+                <label for="quote_ref" class="col-sm-2 control-label">Quote Reference: </label> 
+                <input type="text" class="form-control"  required name="quote_ref">
+            </div>
+            
+            <div class="form-group">
+                <div class="col-sm-2 control-label">
+                    <button class="btn btn-default pull-right" type="submit" name="retrieve">Retrieve</button>
+                </div>
+            </div>
+        </form>
+
+    </div>
+  </body>
+</html>
