@@ -11,18 +11,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <div class="jumbotron">
-            <h1>Car Insurance Broker</h1>
-        </div>
+        
         <div class = "container">
-            
-           <h2 class="form-group-heading">Quote Details</h2>
-           <p>Thank you. Your quote has new been generated, look over the details carefully and click the button below to save.</p>
-           <div class="form-group">
-               <?php echo $quote_details;
-                ?>       
-           </div>
-           <form class="form-horizontal" role= "form" method="post">
+            <form class="form-horizontal" role= "form" method="post">
                 <div class="form-group">
                     <div  class="col-md-12 control-label">
                         <button type="submit" class="btn btn-default pull-right" name="save_quote">Save Quote</button>

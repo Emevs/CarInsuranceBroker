@@ -14,7 +14,6 @@
         $underwriter_return = json_decode(curl_exec($connection), true);
         curl_close($connection);
         echo "return: ";
-        var_dump($underwriter_return); 
        
         return $underwriter_return;
     }
@@ -79,5 +78,21 @@
         return $underwriter_return;
     }
     
-    
+    function process_get($return) {
+        $fields_to_exclude = array("vehicle_id", "created_at", "updated_at");
+        $_SESSION['quote_details'] = '';
+        
+        if (isset($return)) {
+            foreach($return as $index => $quote_info) {
+                if(!(in_array($index, $fields_to_exclude))) {
+                    $_SESSION['quote_details'] .= '<strong>'.str_replace('_', ' ',ucfirst($index)).': </strong>'.$quote_info.'<br>';
+                    if (in_array($index, array("quote_reference", "amount"))) {
+                        
+                        $_SESSION[$index] = $quote_info;
+                    }
+                }
+            }
+        }
+        return $_SESSION['quote_details'];
+    }    
 ?>

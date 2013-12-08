@@ -1,20 +1,18 @@
 <?php
     session_start();
-    
     if(isset($_POST['signin'])) {
-        $url_end = "users";
+        $url_end = "users/login?username=".$_POST['username']."&password=".$_POST['password'];
         $post_info = array(
             "username" => $_POST['username'],
-            "password" => $_POST['password'],
-            "uuid" => ''
+            "password" => $_POST['password']
         );   
         include 'communicate_with_underwriter.php';
-        $return_from_underwriter = post_to_underwriter($post_info, $url_end);
-        $processed_return = process_post_return($return_from_underwriter);
-        if (isset($_SESSION['uuid'])){
-            //header('Location: retrieve_quote.php');
-            echo "YES";
-        }   
+        $get_return = get_uuid(get_from_underwriter($url_end));
+        if (isset($_SESSION['uuid'])) {
+            header('Location: retrieve_quote.php');
+        } else {
+            $error = '<div class="alert alert-danger">Username or password incorrect.</div>';
+        }
     }
     if(isset($_POST['register'])) {
         header("Location: register.php");

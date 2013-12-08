@@ -2,14 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/C:/xampp/htdocs/CarInsuranceBroker/model/person.php</file>
-            <file>file:/C:/xampp/htdocs/CarInsuranceBroker/view/person_form.html</file>
-            <file>file:/C:/xampp/htdocs/CarInsuranceBroker/view/index.html</file>
-            <file>file:/C:/xampp/htdocs/CarInsuranceBroker/controller/index.php</file>
-            <file>file:/C:/xampp/htdocs/CarInsuranceBroker/view/register.html</file>
-            <file>file:/C:/xampp/htdocs/CarInsuranceBroker/model/register.php</file>
-            <file>file:/C:/xampp/htdocs/CarInsuranceBroker/model/communicate_with_underwriter.php</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>

@@ -1,10 +1,13 @@
 <?php
     session_start();
-    
-    var_dump($_SESSION['uuid']);
-    if (isset($_POST['retrieve'])) {
-        header("Location: quote.php");
+    if (isset($_SESSION['uuid'])) {
+        if (isset($_POST['retrieve'])) {
+            $_SESSION['quote_reference'] = $_POST['quote_ref'];
+            header("Location: quote.php");
+        }
+
+        include 'view/retrieve_quote.html';
+    } else {
+        header("location: index.php");
     }
-    
-    include 'view/retrieve_quote.html';
 ?>
